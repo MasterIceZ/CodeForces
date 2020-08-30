@@ -61,7 +61,7 @@ int main ()
 	for(int i=0;i<T;++i)
 	{
 		read(a,b,c);
-		if(a+b+c>=T)
+		if(a+b+c>=2)
 		{
 			cnt++;
 		}

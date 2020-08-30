@@ -4,5 +4,5 @@ for((i=1;i<=n;++i))
 do
 	echo $i
 	./a.out < $i.in > $i.out
-	diff -w $i.in $i.ans
+	diff -w $i.in $i.ans || break
 done

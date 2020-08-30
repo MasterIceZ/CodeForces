@@ -6,3 +6,4 @@ do
 	./a.out < $i.in > $i.out
 	diff -w $i.in $i.ans || break
 done
+rm a.out

@@ -1,4 +1,4 @@
-/*
+/*`
  * AUTHOR : _IceBorworntat926
  * OS     : Ubuntu
  * TASK   : CodeForces
@@ -54,12 +54,25 @@ int main ()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
-	int n;
+	long long n;
 	read(n);
 	vector <long long> v(n);
 	read(v);
 	sort(all(v));
-
-	for(int i=0;i<n;++i)
+	long long ans = 1e18;
+	for(long long i=1;i<=v[n-1];++i)
+	{
+		if(pow(i,n-1) > 1e14)
+		{
+			break;
+		}
+		long long sm = 0;
+		for(long long j=0;j<n;++j)
+		{
+			sm += abs(pow(i,j) - v[j]);
+		}
+		ans = min(ans,sm);
+	}
+	cout << ans << endl;
 	return 0;
 }

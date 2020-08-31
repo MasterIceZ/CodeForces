@@ -7,6 +7,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define int long long
 #define all(x) (x).begin(),(x).end()
 #define space " "
 #define endl '\n'
@@ -50,7 +51,7 @@ template <class A,size_t S> void read(array<A, S>& x)
 	}
 }
 
-int main ()
+int32_t main ()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);

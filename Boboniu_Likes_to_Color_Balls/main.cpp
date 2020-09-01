@@ -58,10 +58,28 @@ int main ()
 	read(t);
 	while(t--)
 	{
-		int r,g,b,w;
-		read(r,g,b,w);
-		int ans = w%2+r%2+b%2+g%2;
-		cout << (ans<2||ans>2&&r*g*b)?"Yes\n":"No\n";
+		int a,b,c,d;
+		read(a,b,c,d);
+		if((a&1)+(b&1)+(c&1)+(d&1)<=1)
+		{
+			cout << "Yes" << endl;
+			continue;
+		}
+		if(a&&b&&c)
+		{
+			a--;
+			b--;
+			c--;
+			d+=3;
+		}
+		if((a&1)+(b&1)+(c&1)+(d&1)<=1)
+		{
+			cout << "Yes" << endl;
+		}
+		else
+		{
+			cout << "No" << endl;
+		}
 	}
 	return 0;
 }

@@ -13,6 +13,8 @@ using namespace std;
 #define endl '\n'
 #define dec(a,b) fixed<<setprecision(b)<<a 
 
+typedef long long ll;
+
 template <class A> void read(vector<A>& v);
 template <class A,size_t S> void read(array <A, S>& a);
 template <class T> void read(T& x)
@@ -50,11 +52,33 @@ template <class A,size_t S> void read(array<A, S>& x)
 		read(x);
 	}
 }
+long long _gcd(long long a,long long b)
+{
+	if(!a)
+	{
+		return b;
+	}
+	if(!b)
+	{
+		return a;
+	}
+	if(a%b==0)
+	{
+		return b;
+	}
+	return _gcd(b,a%b);
+}
+long long _lcm(long long a,long long b)
+{
+	/*a*b = gcd*lcm*/
+	return ((a*b)/_gcd(a,b));
+}
 
 int32_t main ()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
+	
 
 	return 0;
 }

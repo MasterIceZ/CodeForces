@@ -15,9 +15,6 @@ using namespace std;
 
 typedef long long ll;
 
-#define _dbg() cout << "Fly" << endl
-#define _DBG(x) cout << x << endl;
-
 template <class A> void read(vector<A>& v);
 template <class A,size_t S> void read(array <A, S>& a);
 template <class T> void read(T& x)
@@ -81,7 +78,23 @@ int32_t main ()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
-	
-
+	int T;
+	read(T);
+	while(T--)
+	{
+		int x1,y1,z1;
+		int x2,y2,z2;
+		read(x1,y1,z1);
+		read(x2,y2,z2);
+		int ans = min(z1,y2)*2;
+		z2-=x1;
+		z1-=min(z1,y2);
+		z2-=z1;
+		if(z2>0)
+		{
+			ans = ans-z2*2;;
+		}
+		cout << ans << endl;
+	}
 	return 0;
 }

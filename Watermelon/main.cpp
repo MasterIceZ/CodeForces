@@ -15,9 +15,6 @@ using namespace std;
 
 typedef long long ll;
 
-#define _dbg() cout << "Fly" << endl
-#define _DBG(x) cout << x << endl;
-
 template <class A> void read(vector<A>& v);
 template <class A,size_t S> void read(array <A, S>& a);
 template <class T> void read(T& x)
@@ -77,11 +74,22 @@ long long _lcm(long long a,long long b)
 	return ((a*b)/_gcd(a,b));
 }
 
+bool cn(int n)
+{
+	if(n<4)
+	{
+		return false;
+	}
+	return (n%2==0);
+}
+
 int32_t main ()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
-	
-
+	int n;
+	read(n);
+	bool c = cn(n);
+	cout << (c?"YES":"NO") << endl;
 	return 0;
 }

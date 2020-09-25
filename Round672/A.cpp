@@ -7,36 +7,17 @@ bool Q = true;
 void solution(){
     int n;
     cin >> n;
-    vector<int> v(n),u(n);
+    vector<int>v(n);
     V_IN(x,v){
         cin >> x;
     }
-    int token = (n*(n-1)/2)-1;
-    if(token <= 0){
-        cout << "NO" << endl;
-        return ;
-    }
-    
-    bool empty_token = false;
-    //sort(v.begin(),v.end());
-    for(int i=0;i<n-1;++i){
-        if(v[i+1]<v[i]){
-            token-=1;
-            swap(v[i+1],v[i]);
-            i-=2;
-        }
-        if(token == -1){
-            empty_token = true;
-            break;
+    for(int i=1;i<n;++i){
+        if(v[i-1]<=v[i]){
+            cout << "YES" << endl;
+            return ;
         }
     }
-    if(empty_token){
-        cout << "NO" << endl;
-    }
-    else{
-        cout << "YES" << endl;
-    }
-    
+    cout << "NO" << endl;
 }
 
 int32_t main (){

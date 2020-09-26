@@ -10,7 +10,7 @@ int32_t main (){
     vector<char>v;
     for(int i=0;i<s.length();++i){
         if(toupper(s[i])!='A'&&toupper(s[i])!='O'&&toupper(s[i])!='Y'&&toupper(s[i])!='E'&&toupper(s[i])!='U'&&toupper(s[i])!='I'){
-            v.push_back(s[i]);
+            v.push_back(tolower(s[i]));
         }
     }
     for(auto x : v){

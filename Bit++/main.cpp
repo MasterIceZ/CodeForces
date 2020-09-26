@@ -11,27 +11,13 @@ int32_t main (){
     for(int i=0;i<q;++i){
         string s;
         cin >> s;
-        if(i==q-1){
-            if(s=="X++" || s=="X--"){
-                cout << n << endl;
-            }
-            else if(s=="++X"){
-                cout << ++n << endl;
-            }
-            else
-            {
-                cout << --n << endl;
-            }
-        }
-        else{
             if(s=="X++" || s=="++X"){
                 n++;
             }
             else{
                 n--;
             }
-        }
-        cout << n << endl;
     }
+    cout << n << endl;
     return 0;
 }
